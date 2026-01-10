@@ -1,254 +1,462 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <title>EMEF Prof. Roberto Zanutto Desidério</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <head>
+    <meta charset="UTF-8" />
+    <title>EMEF Prof. Roberto Zanutto Desidério</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <link rel="icon" type="image/png" href="img.png" />
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="img.png" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <!-- Fonte semelhante ao original (Inter/Roboto) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    :root {
-      --bg: #f3f4f6;
-      --bg-card: #ffffff;
-      --primary: #2563eb;
-      --primary-soft: #dbeafe;
-      --text-main: #0f172a;
-      --text-muted: #6b7280;
-      --border: #e5e7eb;
-      --radius: 14px;
-      --shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
-    }
-
-    body {
-      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg);
-      color: var(--text-main);
-      -webkit-font-smoothing: antialiased;
-    }
-
-    .page {
-      max-width: 920px;
-      margin: 0 auto;
-      padding: 32px 16px 40px;
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 24px;
-    }
-
-    header h1 {
-      font-size: clamp(1.9rem, 5vw, 2.4rem);
-      font-weight: 600;
-      color: #111827;
-      margin-bottom: 6px;
-    }
-
-    header p {
-      font-size: 0.98rem;
-      color: var(--text-muted);
-    }
-
-    .hero {
-      background: url("img1.png") center/cover no-repeat, linear-gradient(to right, #dbeafe, #e5e7eb);
-      border-radius: 20px;
-      padding: 22px 20px;
-      margin-bottom: 24px;
-      position: relative;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(148, 163, 184, 0.3);
-    }
-
-    .hero-overlay {
-      background: rgba(15, 23, 42, 0.68);
-      position: absolute;
-      inset: 0;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      color: #f9fafb;
-    }
-
-    .hero-tag {
-      display: inline-block;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.8);
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      font-size: 0.75rem;
-      margin-bottom: 8px;
-    }
-
-    .hero-title {
-      font-size: clamp(1.3rem, 3.1vw, 1.6rem);
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-
-    .hero-text {
-      font-size: 0.95rem;
-      margin-bottom: 12px;
-      color: #e5e7eb;
-      max-width: 34rem;
-    }
-
-    .hero-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      font-size: 0.9rem;
-    }
-
-    .hero-pill {
-      padding: 7px 10px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.9);
-      border: 1px solid rgba(148, 163, 184, 0.7);
-    }
-
-    main {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .card {
-      background: var(--bg-card);
-      border-radius: var(--radius);
-      padding: 16px 16px 14px;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-    }
-
-    .card h2 {
-      font-size: 1rem;
-      margin-bottom: 6px;
-    }
-
-    .card p {
-      font-size: 0.94rem;
-      color: var(--text-muted);
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 4px;
-    }
-
-    .pill {
-      font-size: 0.86rem;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: var(--primary-soft);
-      color: #1e3a8a;
-      border: 1px solid #bfdbfe;
-    }
-
-    @media (max-width: 640px) {
-      .page {
-        padding-inline: 14px;
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
 
+      :root {
+        --bg: #f3f4f6;
+        --primary: #1d4ed8;
+        --primary-soft: #e0ecff;
+        --accent: #111827;
+        --text-main: #111827;
+        --text-muted: #6b7280;
+        --card-bg: #ffffff;
+        --border: #e5e7eb;
+        --radius-lg: 16px;
+        --shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+      }
+
+      body {
+        font-family: "Inter", "Roboto", system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        background: var(--bg);
+        color: var(--text-main);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .page {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 32px 16px 40px;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      header h1 {
+        font-size: clamp(1.9rem, 5vw, 2.4rem);
+        font-weight: 700;
+        color: var(--accent);
+        margin-bottom: 6px;
+      }
+
+      header p {
+        font-size: 0.98rem;
+        color: var(--text-muted);
+      }
+
+      /* PRIMEIRO BLOCO ABAIXO DO TÍTULO COM BACKGROUND DE IMAGEM */
       .hero {
-        padding: 18px 16px;
+        border-radius: 20px;
+        overflow: hidden;
+        margin-top: 20px;
+        margin-bottom: 24px;
+        position: relative;
+        background-image: url("img.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        box-shadow: var(--shadow);
+      }
+
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(15, 23, 42, 0.8),
+          rgba(31, 41, 55, 0.7)
+        );
+      }
+
+      .hero-inner {
+        position: relative;
+        z-index: 1;
+        padding: 22px 22px 20px;
+        display: grid;
+        grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.4fr);
+        gap: 20px;
+        color: #f9fafb;
+      }
+
+      .hero-left-title {
+        font-size: 0.9rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #bfdbfe;
+        margin-bottom: 6px;
+      }
+
+      .hero-left-heading {
+        font-size: clamp(1.25rem, 2.7vw, 1.6rem);
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      .hero-left-text {
+        font-size: 0.95rem;
+        color: #e5e7eb;
+        max-width: 32rem;
+        margin-bottom: 12px;
+      }
+
+      .hero-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 12px;
+      }
+
+      .hero-tag {
+        padding: 6px 10px;
+        border-radius: 999px;
+        font-size: 0.8rem;
+        border: 1px solid rgba(191, 219, 254, 0.8);
+        background: rgba(15, 23, 42, 0.6);
+      }
+
+      .hero-info-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        font-size: 0.88rem;
+      }
+
+      .hero-info-pill {
+        padding: 7px 10px;
+        border-radius: 999px;
+        background: rgba(15, 23, 42, 0.85);
+        border: 1px solid rgba(148, 163, 184, 0.7);
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .hero-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background: #22c55e;
+      }
+
+      .hero-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+        text-align: right;
+      }
+
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 7px 10px;
+        border-radius: 999px;
+        background: rgba(15, 23, 42, 0.8);
+        border: 1px solid rgba(191, 219, 254, 0.7);
+        font-size: 0.78rem;
+      }
+
+      .hero-badge-label {
+        padding: 4px 8px;
+        border-radius: 999px;
+        background: rgba(59, 130, 246, 0.2);
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+
+      .hero-stat-title {
+        font-size: 0.98rem;
+        font-weight: 500;
+      }
+
+      .hero-stat-text {
+        font-size: 0.85rem;
+        color: #e5e7eb;
+      }
+
+      /* CARDS RESUMINDO OS PONTOS PRINCIPAIS (SEM A IMAGEM PEQUENA) */
+      .cards-row {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin-bottom: 20px;
       }
 
       .card {
-        padding: 14px 12px 12px;
+        background: var(--card-bg);
+        border-radius: var(--radius-lg);
+        padding: 14px 14px 12px;
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow);
       }
-    }
-  </style>
-</head>
-<body>
-  <div class="page">
-    <header>
-      <h1>EMEF Prof. Roberto Zanutto Desidério</h1>
-      <p>Escola municipal de 6º ao 9º ano em Sertãozinho, SP.</p>
-    </header>
 
-    <section class="hero">
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <span class="hero-tag">Escola pública de qualidade</span>
-        <h2 class="hero-title">Formando alunos para o hoje e para o futuro</h2>
-        <p class="hero-text">
-          Na EMEF Prof. Roberto Zanutto Desidério, ensino tradicional e ferramentas modernas caminham juntos
-          para preparar os estudantes para os desafios do dia a dia.
-        </p>
-        <div class="hero-row">
-          <span class="hero-pill">Secretaria presencial • Seg a Sex • 08h00 às 16h00</span>
-          <span class="hero-pill">Matrículas e informações diretamente na escola</span>
-        </div>
-      </div>
-    </section>
+      .card-label {
+        font-size: 0.75rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: #6b7280;
+        margin-bottom: 4px;
+      }
 
-    <main>
-      <section class="card">
-        <h2>Do 6º ao 9º ano</h2>
+      .card-title {
+        font-size: 0.98rem;
+        font-weight: 600;
+        margin-bottom: 4px;
+        color: var(--accent);
+      }
+
+      .card-text {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+      }
+
+      /* SOBRE A ESCOLA / PATRONO */
+      .columns {
+        display: grid;
+        grid-template-columns: minmax(0, 1.7fr) minmax(0, 1.4fr);
+        gap: 16px;
+        margin-bottom: 20px;
+      }
+
+      .block {
+        background: var(--card-bg);
+        border-radius: var(--radius-lg);
+        padding: 14px 14px 12px;
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow);
+      }
+
+      .block-title {
+        font-size: 0.98rem;
+        font-weight: 600;
+        margin-bottom: 6px;
+        color: var(--accent);
+      }
+
+      .block-text {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+      }
+
+      /* ESPAÇOS / AMBIENTES */
+      .spaces {
+        background: var(--card-bg);
+        border-radius: var(--radius-lg);
+        padding: 14px 14px 12px;
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow);
+      }
+
+      .spaces-title {
+        font-size: 0.98rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: var(--accent);
+      }
+
+      .spaces-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 8px;
+        font-size: 0.86rem;
+      }
+
+      .space-pill {
+        padding: 7px 9px;
+        border-radius: 999px;
+        background: var(--primary-soft);
+        border: 1px solid #bfdbfe;
+        color: #1e3a8a;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      @media (max-width: 960px) {
+        .hero-inner {
+          grid-template-columns: minmax(0, 1fr);
+          text-align: left;
+        }
+
+        .hero-right {
+          text-align: left;
+          align-items: flex-start;
+        }
+
+        .cards-row {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .spaces-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 640px) {
+        .page {
+          padding-inline: 14px;
+        }
+
+        .hero-inner {
+          padding: 18px 16px 16px;
+        }
+
+        .cards-row {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .columns {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .spaces-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <h1>EMEF Prof. Roberto Zanutto Desidério</h1>
         <p>
-          Ensino Fundamental focado em conteúdo sólido, pensamento crítico e responsabilidade,
-          preparando o aluno para o Ensino Médio e para a vida.
+          Na EMEF Prof. Roberto Zanutto Desidério, unimos o ensino tradicional com ferramentas
+          modernas para formar os alunos de amanhã.
         </p>
-        <div class="pill-row">
-          <span class="pill">Ensino Fundamental II</span>
-          <span class="pill">Projetos e atividades</span>
+      </header>
+
+      <!-- PRIMEIRA TELA COM BACKGROUND DE IMAGEM (img.png) -->
+      <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-inner">
+          <div>
+            <p class="hero-left-title">Educação pública em Sertãozinho</p>
+            <h2 class="hero-left-heading">Do 6º ao 9º ano, focado em preparar o aluno para os desafios do dia a dia</h2>
+            <p class="hero-left-text">
+              Alunos que se destacam em competições regionais e nacionais, com uma estrutura que
+              valoriza tanto os livros quanto a tecnologia.
+            </p>
+            <div class="hero-tags">
+              <span class="hero-tag">Ensino Fundamental II</span>
+              <span class="hero-tag">Matemática & Física</span>
+              <span class="hero-tag">Laboratórios e Biblioteca</span>
+            </div>
+            <div class="hero-info-row">
+              <div class="hero-info-pill">
+                <span class="hero-dot"></span>
+                Secretaria presencial na escola • Seg a Sex • 08h00 às 16h00
+              </div>
+              <div class="hero-info-pill">
+                Matrículas e informações diretamente na secretaria
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-right">
+            <div class="hero-badge">
+              <span class="hero-badge-label">Destaques</span>
+              <span>Medalhas em olimpíadas de Matemática e Física</span>
+            </div>
+            <div>
+              <p class="hero-stat-title">Alunos que vão longe</p>
+              <p class="hero-stat-text">
+                Nossos estudantes mostram, com dedicação e estudo, que é possível conquistar
+                resultados importantes dentro e fora da escola.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="card">
-        <h2>Destaque em Matemática e Física</h2>
-        <p>
-          A escola conquista medalhas de Ouro, Prata e Bronze na Olimpíada de Matemática
-          e se destaca na Olimpíada de Física, unindo teoria e prática nos laboratórios.
-        </p>
-        <div class="pill-row">
-          <span class="pill">Olimpíada de Matemática</span>
-          <span class="pill">OBFEP & experiências</span>
+      <!-- CARDS PRINCIPAIS (SEM A IMAGEM PEQUENA) -->
+      <section class="cards-row">
+        <article class="card">
+          <p class="card-label">Ensino</p>
+          <h3 class="card-title">Do 6º ao 9º ano</h3>
+          <p class="card-text">
+            Foco em conteúdo sólido, pensamento crítico e formação cidadã, preparando o aluno
+            para o Ensino Médio e para os desafios do dia a dia.
+          </p>
+        </article>
+
+        <article class="card">
+          <p class="card-label">Matemática</p>
+          <h3 class="card-title">Olimpíadas de Matemática</h3>
+          <p class="card-text">
+            A escola conquista medalhas de Ouro, Prata e Bronze, mostrando que o aprendizado em
+            sala se transforma em resultados concretos em competições.
+          </p>
+        </article>
+
+        <article class="card">
+          <p class="card-label">Física</p>
+          <h3 class="card-title">OBFEP & experiências</h3>
+          <p class="card-text">
+            Destaque na Olimpíada de Física, com atividades que levam a teoria para o laboratório,
+            aproximando o conteúdo da prática.
+          </p>
+        </article>
+      </section>
+
+      <!-- SOBRE A ESCOLA E O PATRONO -->
+      <section class="columns">
+        <article class="block">
+          <h3 class="block-title">A escola</h3>
+          <p class="block-text">
+            A EMEF Prof. Roberto Zanutto Desidério é um ponto de referência em educação na cidade.
+            Buscamos sempre inovar, sem perder os valores importantes que nos trouxeram até aqui.
+            A escola valoriza tanto os livros quanto a tecnologia, promovendo um ambiente de
+            aprendizado constante.
+          </p>
+        </article>
+
+        <article class="block">
+          <h3 class="block-title">O patrono</h3>
+          <p class="block-text">
+            Roberto Zanutto Desidério foi um diretor muito importante que sempre lutou por melhorias
+            nas escolas. Ele foi responsável por trazer laboratórios de ciências para a cidade
+            antigamente. Hoje, seu exemplo inspira o trabalho com foco na qualidade do ensino e
+            no uso de recursos modernos.
+          </p>
+        </article>
+      </section>
+
+      <!-- AMBIENTES DA ESCOLA -->
+      <section class="spaces">
+        <h3 class="spaces-title">Ambientes da escola</h3>
+        <div class="spaces-grid">
+          <div class="space-pill">Sala de aula • Foco & aprendizado</div>
+          <div class="space-pill">Biblioteca • Leitura & pesquisa</div>
+          <div class="space-pill">Quadra • Esporte & lazer</div>
+          <div class="space-pill">Lab. Informática • Computadores</div>
         </div>
       </section>
-
-      <section class="card">
-        <h2>A escola hoje</h2>
-        <p>
-          Referência em educação na cidade, a EMEF busca inovar sem perder os valores que
-          construíram sua história, valorizando tanto os livros quanto a tecnologia.
-        </p>
-      </section>
-
-      <section class="card">
-        <h2>O patrono</h2>
-        <p>
-          Roberto Zanutto Desidério foi diretor e grande defensor da melhoria da rede pública,
-          responsável por trazer laboratórios de ciências para o município.
-        </p>
-      </section>
-
-      <section class="card">
-        <h2>Ambientes da escola</h2>
-        <div class="pill-row">
-          <span class="pill">Sala de aula • Foco & aprendizado</span>
-          <span class="pill">Biblioteca • Leitura & pesquisa</span>
-          <span class="pill">Quadra • Esporte & lazer</span>
-          <span class="pill">Laboratório de Informática • Tecnologia</span>
-        </div>
-      </section>
-    </main>
-  </div>
-</body>
+    </div>
+  </body>
 </html>
