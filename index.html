@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EMEF Prof. Roberto Zanutto Desidério</title>
+    <title>EMEF Professor Roberto Zanutto Desidério</title>
     
     <link rel="icon" href="img.webp" type="image/webp">
     
@@ -22,11 +22,17 @@
                         display: ['"Orbitron"', 'sans-serif'],
                     },
                     colors: {
-                        neon: {
-                            cyan: '#80cbc4',
-                            purple: '#80cbc4',
-                            blue: '#80cbc4'
+                        cyan: {
+                            300: '#b2dfdb', 
+                            400: '#80cbc4', 
+                            500: '#80cbc4', 
+                            600: '#4db6ac', 
+                            900: '#004d40', 
                         },
+                        purple: { 400: '#80cbc4', 500: '#80cbc4', 600: '#4db6ac' },
+                        blue: { 400: '#80cbc4', 500: '#80cbc4', 600: '#4db6ac' },
+                        green: { 400: '#80cbc4', 500: '#80cbc4', 600: '#4db6ac' },
+                        yellow: { 400: '#80cbc4', 500: '#80cbc4', 600: '#4db6ac' },
                         dark: {
                             bg: '#0f172a',
                             card: '#1e293b',
@@ -34,8 +40,8 @@
                         }
                     },
                     boxShadow: {
-                        'neon-cyan': '0 0 10px rgba(6, 182, 212, 0.5), 0 0 20px rgba(6, 182, 212, 0.3)',
-                        'neon-purple': '0 0 10px rgba(217, 70, 239, 0.5), 0 0 20px rgba(217, 70, 239, 0.3)',
+                        'neon-cyan': '0 0 10px rgba(128, 203, 196, 0.5), 0 0 20px rgba(128, 203, 196, 0.3)',
+                        'neon-magenta': '0 0 10px rgba(217, 70, 239, 0.5), 0 0 20px rgba(217, 70, 239, 0.3)',
                     }
                 }
             }
@@ -49,15 +55,9 @@
             overflow-x: hidden;
         }
         
-        /* Ajuste do Background (Agora com .webp) */
         .hero-bg {
-            background-image: linear-gradient(to bottom, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.7)), 
+            background-image: linear-gradient(to bottom, rgba(128, 203, 196, 0.9), rgba(128, 203, 196, 0.7)), 
                               url('img.webp'); 
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            position: relative;
-        }
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -105,16 +105,16 @@
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center">
                 <a href="#" class="flex items-center space-x-3 group">
-                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-cyan-600 flex items-center justify-center text-white text-xl shadow-neon-cyan group-hover:scale-110 transition duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-cyan-600 flex items-center justify-center text-white text-xl shadow-neon-cyan group-hover:scale-110 transition duration-300 shrink-0">
                         <i class="fa-solid fa-graduation-cap"></i>
                     </div>
                     <div class="flex flex-col">
-                        <span class="text-[0.65rem] text-cyan-400 font-display tracking-[0.2em] uppercase">Escola Municipal</span>
-                        <span class="text-lg font-display font-bold text-white leading-tight md:text-xl tracking-wide group-hover:text-cyan-300 transition">Professor Roberto Zanutto</span>
+                        <span class="text-[0.65rem] text-cyan-400 font-display tracking-[0.2em] uppercase">EMEF</span>
+                        <span class="text-sm font-display font-bold text-white leading-tight md:text-lg tracking-wide group-hover:text-cyan-300 transition">Professor Roberto Zanutto Desidério</span>
                     </div>
                 </a>
 
-                <nav class="hidden md:flex space-x-8 font-sans font-medium text-slate-300 text-sm uppercase tracking-wider">
+                <nav class="hidden md:flex space-x-8 font-sans font-medium text-slate-300 text-sm uppercase tracking-wider shrink-0">
                     <a href="#inicio" class="hover:text-cyan-400 transition hover:shadow-cyan-500/50 relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-cyan-400 after:transition-all hover:after:w-full">Início</a>
                     <a href="#sobre" class="hover:text-cyan-400 transition relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-cyan-400 after:transition-all hover:after:w-full">Sobre</a>
                     <a href="#destaques" class="hover:text-cyan-400 transition relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-cyan-400 after:transition-all hover:after:w-full">Destaques</a>
@@ -122,7 +122,7 @@
                     <a href="#contato" class="hover:text-cyan-400 transition relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-cyan-400 after:transition-all hover:after:w-full">Contato</a>
                 </nav>
 
-                <button id="mobile-btn" class="md:hidden text-cyan-400 focus:outline-none text-2xl">
+                <button id="mobile-btn" class="md:hidden text-cyan-400 focus:outline-none text-2xl ml-4">
                     <i class="fa-solid fa-bars-staggered"></i>
                 </button>
             </div>
@@ -154,7 +154,7 @@
             </h1>
             
             <p class="text-lg md:text-2xl text-white mb-12 max-w-3xl mx-auto font-light leading-relaxed drop-shadow-md">
-                Unindo tradição e tecnologia para formar os líderes de amanhã. Bem-vindo à EMEF Roberto Zanutto Desidério.
+                Unindo tradição e tecnologia para formar os líderes de amanhã. Bem-vindo à EMEF Professor Roberto Zanutto Desidério.
             </p>
             
             <div class="flex flex-col sm:flex-row justify-center gap-6">
@@ -219,7 +219,7 @@
                     <div class="w-24 h-1.5 bg-gradient-to-r from-cyan-500 to-transparent mb-8"></div>
                     
                     <p class="text-slate-400 mb-6 leading-relaxed text-lg text-justify font-light">
-                        A EMEF <strong class="text-white">Prof. Roberto Zanutto Desidério</strong> é um ponto de referência em educação na nossa cidade. Buscamos sempre inovar, mas sem perder os valores importantes que nos trouxeram até aqui.
+                        A EMEF <strong class="text-white">Professor Roberto Zanutto Desidério</strong> é um ponto de referência em educação na nossa cidade. Buscamos sempre inovar, mas sem perder os valores importantes que nos trouxeram até aqui.
                     </p>
                     <p class="text-slate-400 mb-8 leading-relaxed text-lg text-justify font-light">
                         <strong class="text-cyan-400">O Patrono:</strong> Roberto Zanutto Desidério foi um diretor muito importante que sempre lutou por melhorias nas escolas. Ele foi responsável por trazer laboratórios de ciências para a cidade antigamente. Hoje, seguimos o exemplo dele, valorizando tanto os livros quanto a tecnologia.
@@ -227,7 +227,7 @@
                     
                     <div class="space-y-4">
                         <div class="flex items-center p-4 bg-white/5 rounded-lg border border-white/5 hover:border-cyan-500/30 transition cursor-default">
-                            <div class="w-10 h-10 rounded-full bg-cyan-500/10 flex items-center justify-center text-cyan-400 mr-4 text-xl">
+                            <div class="w-10 h-10 rounded-full bg-cyan-500/10 flex items-center justify-center text-cyan-400 mr-4 text-xl shrink-0">
                                 <i class="fa-solid fa-school"></i>
                             </div>
                             <div>
@@ -237,7 +237,7 @@
                         </div>
                         
                         <div class="flex items-center p-4 bg-white/5 rounded-lg border border-white/5 hover:border-cyan-500/30 transition cursor-default">
-                            <div class="w-10 h-10 rounded-full bg-cyan-500/10 flex items-center justify-center text-cyan-400 mr-4 text-xl">
+                            <div class="w-10 h-10 rounded-full bg-cyan-500/10 flex items-center justify-center text-cyan-400 mr-4 text-xl shrink-0">
                                 <i class="fa-solid fa-flask"></i>
                             </div>
                             <div>
@@ -303,7 +303,7 @@
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-display font-bold text-white mb-12 text-center">Nossos <span class="text-cyan-500">Espaços</span></h2>
             
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 <div class="group relative overflow-hidden rounded-2xl h-64 border border-white/10 fade-in cursor-pointer bg-dark-card flex flex-col justify-center items-center hover:bg-white/5 hover:border-cyan-500/50 transition duration-500">
                     <div class="w-16 h-16 bg-cyan-900/30 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition duration-500 border border-cyan-500/30 text-cyan-400 text-3xl">
                         <i class="fa-solid fa-chalkboard-user"></i>
@@ -334,6 +334,22 @@
                     </div>
                     <p class="font-display font-bold text-white text-lg">Informática</p>
                     <p class="text-xs text-cyan-400 mt-1 uppercase tracking-widest">Tecnologia</p>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-2xl h-64 border border-white/10 fade-in cursor-pointer bg-dark-card flex flex-col justify-center items-center hover:bg-white/5 hover:border-cyan-500/50 transition duration-500" style="transition-delay: 400ms;">
+                    <div class="w-16 h-16 bg-cyan-900/30 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition duration-500 border border-cyan-500/30 text-cyan-400 text-3xl">
+                        <i class="fa-solid fa-users-rectangle"></i>
+                    </div>
+                    <p class="font-display font-bold text-white text-lg">Auditório</p>
+                    <p class="text-xs text-cyan-400 mt-1 uppercase tracking-widest">Eventos</p>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-2xl h-64 border border-white/10 fade-in cursor-pointer bg-dark-card flex flex-col justify-center items-center hover:bg-white/5 hover:border-cyan-500/50 transition duration-500" style="transition-delay: 500ms;">
+                    <div class="w-16 h-16 bg-cyan-900/30 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition duration-500 border border-cyan-500/30 text-cyan-400 text-3xl">
+                        <i class="fa-solid fa-flask-vial"></i>
+                    </div>
+                    <p class="font-display font-bold text-white text-lg">Laboratório de Ciências</p>
+                    <p class="text-xs text-cyan-400 mt-1 uppercase tracking-widest">Prática</p>
                 </div>
             </div>
         </div>
@@ -479,7 +495,7 @@
                     <p>Desenvolvido por <strong class="text-slate-400">Guilherme Lucas Fontelas Garcia</strong>.</p>
                      <p>Um Aluno<strong class="text-slate-400"> Desidério</strong>.</p>
                     
-                    <p class="mt-1 mb-1">© 2023-2026 • Todos os direitos reservados</p>
+                    <p class="mt-1 mb-1">© 2025 EMEF Professor Roberto Zanutto Desidério. Todos os direitos reservados</p>
                     
                     <a href="https://wa.me/5516992719558" target="_blank" class="inline-flex items-center gap-2 mt-2 px-4 py-1.5 bg-white/5 hover:bg-cyan-500/10 border border-white/10 hover:border-cyan-500 rounded-full transition-all duration-300 group">
                         <i class="fa-brands fa-whatsapp text-cyan-500 text-sm"></i>
